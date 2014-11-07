@@ -1,5 +1,6 @@
 <h1>Products</h1>
-<%= link_to "Add a Product", "/products/new" %>
+<p><%= link_to "Sign Up", new_user_url%></p>
+<p><%= link_to "Add a Product", "/products/new" %></p><br>
 
 <% @products.each do |product| %>
 	<p><%= link_to "#{product.name}", "/products/#{product.id}" %> | Price: $<%= product.formatted_price %></p>
