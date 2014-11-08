@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
 			# browser to let our server (application) reference as they navigate 
 			# through the application.
 		else
+			flash.now[:alert] = "Invalid email or password"	# Flash notification
 			render "new"
 		end
 	end
