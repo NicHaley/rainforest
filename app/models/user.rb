@@ -4,4 +4,6 @@ class User < ActiveRecord::Base
 	# encrypt them into the password_digest field on the users table
 	has_many :reviews
 	has_many :products, through: :reviews
+
+	validates :name, presence: true
 end
